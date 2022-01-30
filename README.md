@@ -36,7 +36,10 @@ Start a new simulation.
 
 ## Additional features
 
-If you are interested in running *planner* be sure that in
+
+<ul>
+ 
+<li>If you are interested in running *planner* be sure that in
 
 *\technical_project\config\*
 
@@ -56,12 +59,13 @@ For this reason final results in:
 
 *\technical_project\config\obstacles.yaml*
 
-are already provided.
+are already provided.</li>
 
-Type:
+<li> Type:
 
 `roslaunch technical_project amcl.launch`
 
 >To run *amcl* localization in RViz during a simulation
 
-
+</li>
+</ul>
