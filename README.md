@@ -49,7 +49,7 @@ Be sure that in <em>\technical_project\config\ </em> are not present *path.yaml*
 Type:
 
 `roslaunch technical_project planner.launch`
->To run the **planner** and load the **map**.
+>To run the **planner** and load the **map**
 
 **N.B. PLANNER MIGHT TAKE MORE THAN 1h 30m TO FINISH!**
  
