@@ -19,15 +19,15 @@ Gain access to:
 
 *\technical_project\models\ar_marker\material\scripts*
 
-In *ar_marker.material* change <span style="background-color: #ffff99;"><em>texture aruco-1.png</em></span> in:
+In **ar_marker.material** change *texture aruco-1.png* in:
 
 
 <ul>
-<li><span style="background-color: #ffff99;"><em>texture aruco-2.png</em></span></li>
+<li><em>texture aruco-2.png</em></li>
 
 >To set AR marker identifier equal to **2** (*Simulation 2*)
  
- <li><span style="background-color: #ffff99;"><em>texture aruco-0.png</em></span></li>
+ <li><em>texture aruco-0.png</em></li>
  
 >To set AR marker identifier equal to **0** (*Simulation 3*)
  
