@@ -5,7 +5,7 @@ Welcome to the repository related to the final examinations of Robotics Lab and 
 
 Open a terminal and type:
 
-1.`roslaunch technical_project scenario.launch'
+2.`roslaunch technical_project scenario.launch`
 >To spawn the **scenario** and the **powerbot** in Gazebo:
  
 2.`roslaunch technical_project simulation.launch`
