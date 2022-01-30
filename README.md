@@ -39,9 +39,9 @@ Start a new simulation.
 
 <ul>
  
-<li>If you are interested in running **planner** be sure that in
+<li>If you are interested in running <strong>planner</strong> be sure that in
 
-*\technical_project\config\*
+<em>\technical_project\config\ </em>
 
 are not presnt any *path.yaml* or *obstacles.yaml* file.
 
