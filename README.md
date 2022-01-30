@@ -2,14 +2,32 @@
 Welcome to the repository related to the final examinations of Robotics Lab and Field and Service Robotics courses (a.y. 2020-21).
 
 #
+## Before starting
+1. The provided **technical_project** package needs of the installation of the following packages:
+
+   <ul>
+   <li><em>velocity_controllers</em></li>
+   <li><em>aruco_ros</em></li>
+   <li><em>map_server</em></li>
+   <li><em>amcl</em></li>
+   <li><em>gmapping</em></li>
+   </ul>
+
+2. Clone the repository in your ROS workspace.
+
+3. Open a new terminal in your ROS workspace and compile it with:
+
+   `catkin_make`
+
+#
 ## To start a simulation
 
 Open a terminal and type:
 
-1.`roslaunch technical_project scenario.launch`
->To spawn the **scenario** and the **powerbot** in Gazebo
+1. `roslaunch technical_project scenario.launch`
+>To spawn the **scenario** and the **PowerBot** in Gazebo
  
-2.`roslaunch technical_project simulation.launch`
+2. `roslaunch technical_project simulation.launch`
 >To run the **odom**, the **navigator** and the **controller**  
 
 By default AR marker identifier is equal to **1** (*Simulation 1*) 
@@ -19,16 +37,16 @@ By default AR marker identifier is equal to **1** (*Simulation 1*)
 
 Gain access to:
 
-*\technical_project\models\ar_marker\material\scripts\ar_marker.material*
+<em><strong>\technical_project\models\ar_marker\material\scripts\ar_marker.material</em></strong>
 
-Change  <em>texture aruco-1.png</em>  with:
+Change <em><strong>texture aruco-1.png</strong></em> with:
 
 <ul>
-<li><em>texture aruco-2.png</em></li>
+<li><em><strong>texture aruco-2.png</strong></em></li>
 
 >To set AR marker identifier equal to **2** (*Simulation 2*)
  
- <li><em>texture aruco-0.png</em></li>
+ <li><em><strong>texture aruco-0.png</strong></em></li>
  
 >To set AR marker identifier equal to **0** (*Simulation 3*)
  
@@ -44,7 +62,8 @@ Now start a new simulation.
 
 ### If you want to replan the paths
  
-Be sure that in <em>\technical_project\config\ </em> are not present *path.yaml* or *obstacles.yaml* files.
+Be sure that in 
+<em><strong>\technical_project\config</em></strong> are not present <em><strong>path.yaml</em></strong> or <em><strong>obstacles.yaml</strong></em></strong> files.
 
 Type:
 
@@ -61,17 +80,19 @@ For this reason final results in *path.yaml* and *obstacles.yaml* are already pr
  
  Open a new terminal and type:
  
-1.`roslaunch technical_project visualization.launch`
+1. `roslaunch technical_project visualization.launch`
 
 >To run **visualization**, **RViz** and load the **map**
  
-2.In the same terminal type a number from **0** to **5** to select a path
+2. In the same terminal type a number from **0** to **5** to select a path
  
-3.In RViz add by topic:
- 
- - *\map Map*
- - *\visualization_obst Marker*
- - *\visualization_points_and_lines Marker*
+3. In RViz add by topic:
+
+   <ul>
+   <li><em>\map Map</em></li>
+   <li><em>\visualization_obst Marker</em></li>
+   <li><em>\visualization_points_and_lines Marker</em></li>
+   </ul>
  
  to visualize the selected path.
  
