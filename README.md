@@ -19,7 +19,7 @@ Gain access to:
 
 `\technical_project\models\ar_marker\material\scripts`
 
-In `ar_marker.material` change 'texture aruco-1.png' in:
+In `ar_marker.material` change `texture aruco-1.png` in:
 
 1.`texture aruco-2.png`
 >To set AR marker identifier equal to *2*
