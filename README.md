@@ -39,7 +39,7 @@ Start a new simulation.
 
 <ul>
  
-<li>If you are interested in running *planner* be sure that in
+<li>If you are interested in running **planner** be sure that in
 
 *\technical_project\config\*
 
