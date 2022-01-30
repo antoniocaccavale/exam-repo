@@ -22,7 +22,7 @@ Gain access to:
 In `ar_marker.material` change `texture aruco-1.png` in:
 
 1.`texture aruco-2.png`
->To set AR marker identifier equal to **2**
+>To set AR marker identifier equal to **2** (*Simulation 2*)
 
-1.`texture aruco-0.png`
->To set AR marker identifier equal to **0**
+2.`texture aruco-0.png`
+>To set AR marker identifier equal to **0** (*Simulation 3*)
