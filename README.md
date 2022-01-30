@@ -11,7 +11,7 @@ Open a terminal and type:
 2.`roslaunch technical_project simulation.launch`
 >To start a simulation
 
-By default AR marker identifier is *1*. 
+By default AR marker identifier is **1**. 
 
 ## To change simulation
 
@@ -22,7 +22,7 @@ Gain access to:
 In `ar_marker.material` change `texture aruco-1.png` in:
 
 1.`texture aruco-2.png`
->To set AR marker identifier equal to *2*
+>To set AR marker identifier equal to **2**
 
 1.`texture aruco-0.png`
->To set AR marker identifier equal to *0*
+>To set AR marker identifier equal to **0**
