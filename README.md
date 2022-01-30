@@ -1,6 +1,7 @@
 # exam-repo
 Welcome to the repository related to the final examinations of Robotics Lab and Field and Service Robotics courses (a.y. 2020-21).
 
+#
 ## To start a simulation
 
 Open a terminal and type:
@@ -9,10 +10,11 @@ Open a terminal and type:
 >To spawn the **scenario** and the **powerbot** in Gazebo
  
 2.`roslaunch technical_project simulation.launch`
->To run the **odom**, the **navigator** and the **controller** simultainously  
+>To run the **odom**, the **navigator** and the **controller**  
 
-By default AR marker identifier is equal to **1** (*Simulation 1*). 
+By default AR marker identifier is equal to **1** (*Simulation 1*) 
 
+#
 ## To change simulation
 
 Gain access to:
@@ -32,58 +34,51 @@ Change  <em>texture aruco-1.png</em>  with:
  
 </ul>
 
-Start a new simulation.
+Now start a new simulation.
 
+#
 ## Additional features
 
 
-<ul>
- 
-<li>If you are interested in re-planning the paths
- 
-Be sure that in
 
-<em>\technical_project\config\ </em>
 
-are not present any *path.yaml* or *obstacles.yaml* file.
+### If you want to replan the paths
+ 
+Be sure that in <em>\technical_project\config\ </em> are not present *path.yaml* or *obstacles.yaml* files.
 
 Type:
 
 `roslaunch technical_project planner.launch`
->To load the **map** and run the **planner**.
-
+>To run the **planner** and load the **map**.
 
 **N.B. PLANNER MIGHT TAKE MORE THAN 1h 30m TO FINISH!**
  
-For this reason final results in:
+For this reason final results in *path.yaml* and *obstacles.yaml* are already provided.
 
-*\technical_project\config\path.yaml*
+ 
+#
+### If you want to visualize paths
+ 
+ Open a new terminal and type:
+ 
+1.`roslaunch technical_project visualization.launch`
 
-*\technical_project\config\obstacles.yaml*
-
-are already provided.</li>
+>To run **visualization**, **RViz** and load the **map**
  
+2.In the same terminal type a number from **0** to **5** to select a path
  
-<li> If you want to visualize the paths 
+3.In RViz add by topic:
  
- Opne a new terminal and type:
+ - *\map Map*
+ - *\visualization_obst Marker*
+ - *\visualization_points_and_lines Marker*
  
-`roslaunch technical_project visualization.launch`
-
->To run **visualization**,**RViz** and load the **map**
- 
- In the same terminal type a number from 0 to 5 for the corresponding path.
- 
- In RViz add by topic:
- 
- - \map Map
- - \visualization_obst Marker
- - \visualization_points_and_lines Marker
+ to visualize the selected path.
  
 
-</li>
 
-<li> If you want to localize the robot during a simulation 
+# 
+### If you want to localize the robot during a simulation
  
  Open a new terminal and type:
  
@@ -91,7 +86,4 @@ are already provided.</li>
 
 >To run **amcl**, **RViz** and load the **map**
  
- 
 
-</li>
-</ul>
