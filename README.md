@@ -17,17 +17,17 @@ By default AR marker identifier is **1**.
 
 Gain access to:
 
-`\technical_project\models\ar_marker\material\scripts`
+*\technical_project\models\ar_marker\material\scripts*
 
-In `ar_marker.material` change `texture aruco-1.png` in:
+In *ar_marker.material* change *texture aruco-1.png* in:
 
 
 <ul>
-<li>`texture aruco-2.png`</li>
+<li><em>texture aruco-2.png</em></li>
 
 >To set AR marker identifier equal to **2** (*Simulation 2*)
  
- <li>`texture aruco-0.png`</li>
+ <li><em>texture aruco-0.png</em></li>
  
 >To set AR marker identifier equal to **0** (*Simulation 3*)
  
