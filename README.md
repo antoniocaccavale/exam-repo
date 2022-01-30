@@ -39,13 +39,15 @@ Start a new simulation.
 
 <ul>
  
-<li>If you are interested in running <strong>planner</strong> be sure that in
+<li>If you are interested in re-planning the paths
+ 
+Be sure that in
 
 <em>\technical_project\config\ </em>
 
-are not presnt any *path.yaml* or *obstacles.yaml* file.
+are not present any *path.yaml* or *obstacles.yaml* file.
 
-Then launch:
+Type:
 
 `roslaunch technical_project planner.launch`
 >To load the **map** and run the **planner**.
@@ -60,12 +62,36 @@ For this reason final results in:
 *\technical_project\config\obstacles.yaml*
 
 are already provided.</li>
+ 
+ 
+<li> If you want to visualize the paths 
+ 
+ Opne a new terminal and type:
+ 
+`roslaunch technical_project visualization.launch`
 
-<li> Type:
+>To run **visualization**,**RViz** and load the **map**
+ 
+ In the same terminal type a number from 0 to 5 for the corresponding path.
+ 
+ In RViz add by topic:
+ 
+ - \map Map
+ - \visualization_obst Marker
+ - \visualization_points_and_lines Marker
+ 
 
+</li>
+
+<li> If you want to localize the robot during a simulation 
+ 
+ Open a new terminal and type:
+ 
 `roslaunch technical_project amcl.launch`
 
->To run *amcl* localization in RViz during a simulation
+>To run **amcl**, **RViz** and load the **map**
+ 
+ 
 
 </li>
 </ul>
