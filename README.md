@@ -1,6 +1,8 @@
 # exam-repo
 Welcome to the repository related to the final examinations of Robotics Lab and Field and Service Robotics courses (a.y. 2020-21).
 
+The repository is composed by the **technical_project** ROS package, the **technical_project.ogv** video and the **technical_project.pdf** concluding document.
+
 #
 ## Before starting
 1. The **technical_project** package needs the installation of the following packages:
