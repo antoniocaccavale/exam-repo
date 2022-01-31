@@ -56,6 +56,7 @@ Change <em><strong>texture aruco-1.png</strong></em> with:
 
 Now start a new simulation.
 
+
 #
 ## Additional features
 
@@ -65,7 +66,7 @@ Now start a new simulation.
 ### If you want to replan the paths
  
 Be sure that in 
-<em><strong>\technical_project\config</em></strong> are not present <em><strong>path.yaml</em></strong> or <em><strong>obstacles.yaml</strong></em></strong> files.
+<em><strong>\technical_project\config</em></strong> are not present <em><strong>path.yaml</em></strong> and <em><strong>obstacles.yaml</strong></em></strong> files.
 
 Type:
 
