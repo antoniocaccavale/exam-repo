@@ -3,7 +3,7 @@ Welcome to the repository related to the final examinations of Robotics Lab and 
 
 #
 ## Before starting
-1. The provided **technical_project** package needs of the installation of the following packages:
+1. The **technical_project** package needs the installation of the following packages:
 
    <ul>
    <li><em>velocity_controllers</em></li>
@@ -72,11 +72,11 @@ Type:
 
 **N.B. PLANNER MIGHT TAKE MORE THAN 1h 30m TO FINISH!**
  
-For this reason final results in *path.yaml* and *obstacles.yaml* are already provided.
+For this reason final results in **path.yaml** and **obstacles.yaml** are already provided.
 
  
 #
-### If you want to visualize paths
+### If you want to visualize the paths
  
  Open a new terminal and type:
  
