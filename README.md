@@ -1,7 +1,7 @@
 # exam-repo
-Welcome to the repository related to the final examinations of Robotics Lab and Field and Service Robotics courses (a.y. 2020-21).
+Welcome to the repository of the final examinations for Robotics Lab and Field and Service Robotics courses (MSc in Automation and Robotics Engineering, University of Naples Federico II, A.Y. 2020/21).
 
-The repository is composed by the **technical_project** ROS package, the **technical_project.ogv** video and the **technical_project.pdf** concluding document.
+The repository is composed by the **technical_project** folder of the ROS package, the **technical_project.ogv** video and the **technical_project.pdf** concluding document.
 
 #
 ## Before starting
@@ -46,11 +46,11 @@ Change <em><strong>texture aruco-1.png</strong></em> with:
 <ul>
 <li><em><strong>texture aruco-2.png</strong></em></li>
 
->To set AR marker identifier equal to **2** (*Simulation 2*)
+>To set AR marker identifier equal to **2** (to change in *Simulation 2*)
  
- <li><em><strong>texture aruco-0.png</strong></em></li>
+ <li><em><strong>texture aruco-0.png</strong></em></li> (or any other thing)
  
->To set AR marker identifier equal to **0** (*Simulation 3*)
+>To set AR marker identifier equal to **0** (or in any case to change in *Simulation 3*)
  
 </ul>
 
