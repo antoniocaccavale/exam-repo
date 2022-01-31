@@ -5,7 +5,7 @@ The repository is composed by the **technical_project** ROS package, the **techn
 
 #
 ## Before starting
-1. The **technical_project** package needs the installation of the following packages:
+1. The **technical_project** package needs the installation of the following extra packages:
 
    <ul>
    <li><em>velocity_controllers</em></li>
