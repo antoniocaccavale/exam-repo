@@ -1,0 +1,187 @@
+<?xml version="1.0"?>
+
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <!--<xacro:include filename="$(find p2os_urdf)/defs/materials.xacro"/>-->
+
+  <!-- Properties (Constants) -->
+  <xacro:property name="M_PI" value="3.14159"/>
+  <!-- where to find all meshes -->
+<xacro:property name="mesh_directory" value="package://champ_description/meshes/p3dx_meshes"/>
+
+  <!-- Right/${suffix} Swivel + Hubcap + Wheel -->
+  <xacro:macro name="powerbot_swivel_ball" params="suffix parent reflect">
+
+ <!-- Right/${suffix} Swivel support
+
+	<link name="${suffix}_swivel_support">
+		<inertial>
+			<mass value="0.1"/>	
+			<origin xyz="0 0 0" rpy="0 0 0"/>
+			<inertia ixx="0.01" ixy="0" ixz="0"
+				 iyy="0.01" iyz="0" izz="0.01"/>
+  	 	</inertial>
+	<visual name="${suffix}_swivel_support_visual">
+		<origin xyz="0 0 0" rpy="0 0 0"/>
+		<geometry name="swivel">
+			<mesh filename="${mesh_directory}/swivel_support.stl" />
+		</geometry>
+		<material name="swivel">
+			<color rgba="0.9 0.9 0.9 1"/>
+		</material>
+	</visual>
+	<collision>
+		<origin xyz="0 0 0" rpy="0 0 0"/>
+		<geometry>
+			<mesh filename="${mesh_directory}/swivel_support.stl" scale= "1.005 1.005 1.005"/>
+		</geometry>
+	</collision>
+	</link>
+	<gazebo reference="swivel">
+		<material value="Gazebo/Grey"/>
+	</gazebo>
+
+	<joint name="${suffix}_base_swivel_joint" type="continuous">
+		<origin xyz="0 0 -0.04855" rpy="0 0 0"/>
+		<axis xyz="0 0 1"/>
+	    <limit effort="100" velocity="100" k_velocity="0" />
+	    <joint_properties damping="0.0" friction="0.0" />
+		<parent link="${suffix}_swivel_support"/>
+		<child link="powerbot_${suffix}_swivel"/>
+	</joint>
+-->
+	<joint name="${suffix}_base_swivel_support_joint" type="fixed">
+		<origin xyz="-0.215 ${reflect*0.2} -0.145" rpy="0 0 0"/>
+		<parent link="${parent}"/>
+		<child link="powerbot_${suffix}_swivel_support"/>
+	</joint>
+
+
+
+<!-- Support bowl-->
+    <link name="powerbot_${suffix}_swivel_support">
+		<inertial>
+			<mass value="2.0"/>	
+			<origin xyz="0 0 0" rpy="0 0 0"/>
+			<inertia ixx="0.001" ixy="0" ixz="0"
+				 iyy="0.001" iyz="0" izz="0.001"/>
+  	 	</inertial>
+	<visual>
+		<origin xyz="0 0 0" rpy="0 0 0"/>
+		<geometry name="swivel">
+			<mesh filename="${mesh_directory}/bowl.stl" />
+		</geometry>
+	</visual>
+	<collision>
+		<origin xyz="0 0 0" rpy="0 0 0"/>
+		<geometry>
+			<mesh filename="${mesh_directory}/bowl.stl" scale= "1.005 1.005 1.005"/>
+		</geometry>
+	</collision>
+	</link>
+	<gazebo reference="powerbot_${suffix}_swivel_support">
+		<material value="Gazebo/Yellow"/>
+	</gazebo>
+
+
+
+<!-- ${suffix} support swivel ball joint -->
+
+<joint name="${suffix}_ballRoot_joint" type="fixed" >
+    <origin xyz="0 0 0" />
+    <parent link="powerbot_${suffix}_swivel_support" />
+    <child link="${suffix}_ball" />
+</joint>
+
+<link name="${suffix}_ball" >
+<inertial>
+	<mass value="2.0"/>	
+	<origin xyz="0 0 0"/>
+	<inertia ixx="0.00288" ixy="0.0" ixz="0.0"
+		 iyy="0.00288" iyz="0.0" izz="0.00288"/>
+</inertial>
+  </link>
+
+
+<joint name="${suffix}_ballPsi_joint" type="continuous" >
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="${suffix}_ball" />
+    <child link="${suffix}_ball_psi_link" />
+    <axis xyz="0 0 1" />
+    <dynamics damping="0.09" />
+</joint>
+
+<link name="${suffix}_ball_psi_link" >
+<inertial>
+	<mass value="2.0"/>	
+	<origin xyz="0 0 0"/>
+	<inertia ixx="0.00288" ixy="0.0" ixz="0.0"
+		 iyy="0.00288" iyz="0.0" izz="0.00288"/>
+</inertial>
+  </link>
+
+
+<joint name="${suffix}_ballTheta_joint" type="continuous" >
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="${suffix}_ball_psi_link"/>
+    <child link="${suffix}_ball_theta_link"/>
+    <axis xyz="0 1 0" />
+    <dynamics damping="0.09" />
+</joint>
+
+<link name="${suffix}_ball_theta_link" >
+	<inertial>
+		<mass value="2.0"/>	
+		<origin xyz="0 0 0"/>
+		<inertia ixx="0.00288" ixy="0.0" ixz="0.0"
+			 iyy="0.00288" iyz="0.0" izz="0.00288"/>
+	</inertial>
+  </link>
+
+<joint name="${suffix}_ballPhi_joint" type="continuous" >
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="${suffix}_ball_theta_link"/>
+    <child link="powerbot_${suffix}_swivel_ball"/>
+    <axis xyz="1 0 0" />
+    <dynamics damping="0.09" />
+</joint>
+<!--
+-->
+ <!-- Swivel ball -->
+<link name="powerbot_${suffix}_swivel_ball">
+	<inertial>
+			<mass value="2.0"/>	
+			<origin xyz="0 0 0"/>
+			<inertia ixx="0.00288" ixy="0.0" ixz="0.0"
+				 iyy="0.00288" iyz="0.0" izz="0.00288"/>
+  	 	</inertial>
+	<visual>
+		<origin xyz="0 0 0" rpy="0 0 0"/>
+		<geometry name="powerbot_${suffix}_swivel_ball">
+			<mesh filename="${mesh_directory}/ball.stl" />
+		</geometry>
+		<material name="Whee${suffix}_black">
+			<color rgba="0.117 0.117 0.117 1"/>
+		</material>
+	</visual>
+	<collision>
+		<origin xyz="0 0 0" rpy=" ${-3.1415927/2} 0 0"/>
+		<geometry>
+			<sphere radius="0.06"/>
+		</geometry>
+	</collision>
+  </link>
+
+    <gazebo reference="powerbot_${suffix}_swivel_ball">
+      <material value="Gazebo/Black"/>
+      <mu1>100</mu1>
+      <mu2>200</mu2>
+      <kp>100000000.0</kp>
+      <kd>1.0</kd>
+    </gazebo>
+
+  </xacro:macro>
+
+
+</robot>
+

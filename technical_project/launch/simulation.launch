@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<launch>
+
+	<rosparam file="$(find technical_project)/config/path.yaml"  />
+	<node pkg="technical_project" type="navigator" name="navigator" output="screen" />
+	<node pkg="technical_project" type="controller" name="controller" output="screen" />
+	<node pkg="technical_project" type="odom" name="odom" output="screen" />
+	
+</launch>
+

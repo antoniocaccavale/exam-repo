@@ -1,0 +1,5 @@
+1. fix powerbot.xacro and use pioneer3dx from p2os-urdf pkg as reference.
+	- Main problems <collision> tags for front & back sonar and swivel wheels were defined as <box size="0 0 0"/> which caused CHOMP planner to fail.
+2. Repair and modify broken or innacurrate meshes.
+3. Verify measurements and dimensions.
+4. Add laser scanner mesh front and back bumper sensors.
