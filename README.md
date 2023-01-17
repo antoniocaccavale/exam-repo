@@ -1,5 +1,7 @@
 # exam-repo
-Welcome to the repository of the final examinations for Robotics Lab and Field and Service Robotics courses (MSc in Automation and Robotics Engineering, University of Naples Federico II, A.Y. 2020/21). The project is about the autonomous navigation based on RRT* algorithm of a differential-drive robot in a logistic known environment.
+Welcome to the repository of the final examinations for Robotics Lab and Field and Service Robotics courses (MSc in Automation and Robotics Engineering, University of Naples Federico II, A.Y. 2020/21). 
+
+The project is about the autonomous navigation based on RRT* algorithm of a differential-drive robot in a logistic known environment.
 
 The repository is composed by the **technical_project** folder of the ROS package and the **technical_project.ogv** video.
 
