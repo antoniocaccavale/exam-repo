@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<launch>
+
+	<rosparam file="$(find technical_project)/config/path.yaml" />
+	<rosparam file="$(find technical_project)/config/obstacles.yaml" />
+	<arg name="map_file" default="$(find technical_project)/maps/map.yaml"/>       
+	<node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" respawn="true" />
+	<node pkg="technical_project" type="visualization" name="visualization" output="screen" />
+	<node name="rviz" pkg="rviz" type="rviz" args="-d $(find technical_project)/urdf.rviz" required="true" />
+</launch>
+

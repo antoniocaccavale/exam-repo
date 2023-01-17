@@ -1,0 +1,53 @@
+digraph G {
+node [shape=box];
+"base_center" [label="base_center"];
+"powerbot_left_wheel" [label="powerbot_left_wheel"];
+"powerbot_left_hubcap" [label="powerbot_left_hubcap"];
+"powerbot_right_wheel" [label="powerbot_right_wheel"];
+"powerbot_right_hubcap" [label="powerbot_right_hubcap"];
+"top_plate" [label="top_plate"];
+"powerbot_left_swivel_support" [label="powerbot_left_swivel_support"];
+"left_ball" [label="left_ball"];
+"left_ball_psi_link" [label="left_ball_psi_link"];
+"left_ball_theta_link" [label="left_ball_theta_link"];
+"powerbot_left_swivel_ball" [label="powerbot_left_swivel_ball"];
+"powerbot_right_swivel_support" [label="powerbot_right_swivel_support"];
+"right_ball" [label="right_ball"];
+"right_ball_psi_link" [label="right_ball_psi_link"];
+"right_ball_theta_link" [label="right_ball_theta_link"];
+"powerbot_right_swivel_ball" [label="powerbot_right_swivel_ball"];
+"sensor_link" [label="sensor_link"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"base_center" -> "base_left_wheel_joint" [label="xyz: 0.084 0.35 -0.07 \nrpy: 0 -0 0"]
+"base_left_wheel_joint" -> "powerbot_left_wheel"
+"powerbot_left_wheel" -> "base_left_hubcap_joint" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"base_left_hubcap_joint" -> "powerbot_left_hubcap"
+"base_center" -> "base_right_wheel_joint" [label="xyz: 0.084 -0.35 -0.07 \nrpy: 0 -0 0"]
+"base_right_wheel_joint" -> "powerbot_right_wheel"
+"powerbot_right_wheel" -> "base_right_hubcap_joint" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"base_right_hubcap_joint" -> "powerbot_right_hubcap"
+"base_center" -> "base_top_joint" [label="xyz: -0.045 0 0.277 \nrpy: 0 -0 0"]
+"base_top_joint" -> "top_plate"
+"base_center" -> "left_base_swivel_support_joint" [label="xyz: -0.215 0.2 -0.145 \nrpy: 0 -0 0"]
+"left_base_swivel_support_joint" -> "powerbot_left_swivel_support"
+"powerbot_left_swivel_support" -> "left_ballRoot_joint" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"left_ballRoot_joint" -> "left_ball"
+"left_ball" -> "left_ballPsi_joint" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"left_ballPsi_joint" -> "left_ball_psi_link"
+"left_ball_psi_link" -> "left_ballTheta_joint" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"left_ballTheta_joint" -> "left_ball_theta_link"
+"left_ball_theta_link" -> "left_ballPhi_joint" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"left_ballPhi_joint" -> "powerbot_left_swivel_ball"
+"base_center" -> "right_base_swivel_support_joint" [label="xyz: -0.215 -0.2 -0.145 \nrpy: 0 -0 0"]
+"right_base_swivel_support_joint" -> "powerbot_right_swivel_support"
+"powerbot_right_swivel_support" -> "right_ballRoot_joint" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"right_ballRoot_joint" -> "right_ball"
+"right_ball" -> "right_ballPsi_joint" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"right_ballPsi_joint" -> "right_ball_psi_link"
+"right_ball_psi_link" -> "right_ballTheta_joint" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"right_ballTheta_joint" -> "right_ball_theta_link"
+"right_ball_theta_link" -> "right_ballPhi_joint" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"right_ballPhi_joint" -> "powerbot_right_swivel_ball"
+"base_center" -> "sensor_joint" [label="xyz: 0.39 0 0.215 \nrpy: 0 -0 0"]
+"sensor_joint" -> "sensor_link"
+}
